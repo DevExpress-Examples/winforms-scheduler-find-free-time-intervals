@@ -1,5 +1,7 @@
-﻿Namespace FreeTimeIntervals
-    Partial Public Class Form1
+Namespace FreeTimeIntervals
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,29 +12,29 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+'#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
-            Dim timeRuler1 As New DevExpress.XtraScheduler.TimeRuler()
-            Dim timeScaleYear1 As New DevExpress.XtraScheduler.TimeScaleYear()
-            Dim timeScaleQuarter1 As New DevExpress.XtraScheduler.TimeScaleQuarter()
-            Dim timeScaleMonth1 As New DevExpress.XtraScheduler.TimeScaleMonth()
-            Dim timeScaleWeek1 As New DevExpress.XtraScheduler.TimeScaleWeek()
-            Dim timeScaleDay1 As New DevExpress.XtraScheduler.TimeScaleDay()
-            Dim timeScaleHour1 As New DevExpress.XtraScheduler.TimeScaleHour()
-            Dim timeScaleFixedInterval1 As New DevExpress.XtraScheduler.TimeScaleFixedInterval()
-            Dim timeRuler2 As New DevExpress.XtraScheduler.TimeRuler()
+            Dim timeRuler1 As DevExpress.XtraScheduler.TimeRuler = New DevExpress.XtraScheduler.TimeRuler()
+            Dim timeScaleYear1 As DevExpress.XtraScheduler.TimeScaleYear = New DevExpress.XtraScheduler.TimeScaleYear()
+            Dim timeScaleQuarter1 As DevExpress.XtraScheduler.TimeScaleQuarter = New DevExpress.XtraScheduler.TimeScaleQuarter()
+            Dim timeScaleMonth1 As DevExpress.XtraScheduler.TimeScaleMonth = New DevExpress.XtraScheduler.TimeScaleMonth()
+            Dim timeScaleWeek1 As DevExpress.XtraScheduler.TimeScaleWeek = New DevExpress.XtraScheduler.TimeScaleWeek()
+            Dim timeScaleDay1 As DevExpress.XtraScheduler.TimeScaleDay = New DevExpress.XtraScheduler.TimeScaleDay()
+            Dim timeScaleHour1 As DevExpress.XtraScheduler.TimeScaleHour = New DevExpress.XtraScheduler.TimeScaleHour()
+            Dim timeScaleFixedInterval1 As DevExpress.XtraScheduler.TimeScaleFixedInterval = New DevExpress.XtraScheduler.TimeScaleFixedInterval()
+            Dim timeRuler2 As DevExpress.XtraScheduler.TimeRuler = New DevExpress.XtraScheduler.TimeRuler()
             Me.schedulerControl1 = New DevExpress.XtraScheduler.SchedulerControl()
             Me.schedulerStorage1 = New DevExpress.XtraScheduler.SchedulerStorage(Me.components)
             Me.appointmentsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -46,15 +48,15 @@
             Me.groupBox1 = New System.Windows.Forms.GroupBox()
             Me.label1 = New System.Windows.Forms.Label()
             Me.slotDuration = New DevExpress.XtraEditors.TimeEdit()
-            DirectCast(Me.schedulerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.schedulerStorage1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.appointmentsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.xtraSchedulingDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.resourcesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.xtraSchedulingDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.dateNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.schedulerControl1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.schedulerStorage1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.appointmentsBindingSource), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.xtraSchedulingDataSet), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.resourcesBindingSource), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.xtraSchedulingDataSet1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.dateNavigator1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.groupBox1.SuspendLayout()
-            DirectCast(Me.slotDuration.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.slotDuration.Properties), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' schedulerControl1
@@ -63,7 +65,7 @@
             Me.schedulerControl1.Location = New System.Drawing.Point(12, 12)
             Me.schedulerControl1.Name = "schedulerControl1"
             Me.schedulerControl1.Size = New System.Drawing.Size(592, 462)
-            Me.schedulerControl1.Start = New Date(2007, 12, 17, 0, 0, 0, 0)
+            Me.schedulerControl1.Start = New System.DateTime(2007, 12, 17, 0, 0, 0, 0)
             Me.schedulerControl1.Storage = Me.schedulerStorage1
             Me.schedulerControl1.TabIndex = 0
             Me.schedulerControl1.Text = "schedulerControl1"
@@ -91,7 +93,7 @@
             Me.schedulerStorage1.Appointments.DataSource = Me.appointmentsBindingSource
             Me.schedulerStorage1.Appointments.Mappings.AllDay = "AllDay"
             Me.schedulerStorage1.Appointments.Mappings.Description = "Description"
-            Me.schedulerStorage1.Appointments.Mappings.End = "EndDate"
+            Me.schedulerStorage1.Appointments.Mappings.[End] = "EndDate"
             Me.schedulerStorage1.Appointments.Mappings.Label = "Label"
             Me.schedulerStorage1.Appointments.Mappings.Location = "Location"
             Me.schedulerStorage1.Appointments.Mappings.RecurrenceInfo = "RecurrenceInfo"
@@ -105,6 +107,9 @@
             Me.schedulerStorage1.Resources.Mappings.Caption = "ResourceName"
             Me.schedulerStorage1.Resources.Mappings.Color = "Color"
             Me.schedulerStorage1.Resources.Mappings.Id = "ResourceID"
+            AddHandler Me.schedulerStorage1.AppointmentsChanged, New DevExpress.XtraScheduler.PersistentObjectsEventHandler(AddressOf Me.OnApptChangedInsertedDeleted)
+            AddHandler Me.schedulerStorage1.AppointmentsInserted, New DevExpress.XtraScheduler.PersistentObjectsEventHandler(AddressOf Me.OnApptChangedInsertedDeleted)
+            AddHandler Me.schedulerStorage1.AppointmentsDeleted, New DevExpress.XtraScheduler.PersistentObjectsEventHandler(AddressOf Me.OnApptChangedInsertedDeleted)
             ' 
             ' appointmentsBindingSource
             ' 
@@ -142,6 +147,7 @@
             Me.button1.TabIndex = 1
             Me.button1.Text = "Find Next"
             Me.button1.UseVisualStyleBackColor = True
+            AddHandler Me.button1.Click, New System.EventHandler(AddressOf Me.button1_Click)
             ' 
             ' dateNavigator1
             ' 
@@ -176,11 +182,11 @@
             ' 
             ' slotDuration
             ' 
-            Me.slotDuration.EditValue = New Date(2008, 9, 26, 1, 30, 0, 0)
+            Me.slotDuration.EditValue = New System.DateTime(2008, 9, 26, 1, 30, 0, 0)
             Me.slotDuration.Location = New System.Drawing.Point(10, 38)
             Me.slotDuration.Name = "slotDuration"
-            Me.slotDuration.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() { New DevExpress.XtraEditors.Controls.EditorButton()})
-            Me.slotDuration.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default
+            Me.slotDuration.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+            Me.slotDuration.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
             Me.slotDuration.Properties.Mask.EditMask = "HH:mm"
             Me.slotDuration.Size = New System.Drawing.Size(107, 20)
             Me.slotDuration.TabIndex = 2
@@ -195,35 +201,45 @@
             Me.Controls.Add(Me.schedulerControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.schedulerControl1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.schedulerStorage1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.appointmentsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.xtraSchedulingDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.resourcesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.xtraSchedulingDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.dateNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            CType((Me.schedulerControl1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.schedulerStorage1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.appointmentsBindingSource), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.xtraSchedulingDataSet), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.resourcesBindingSource), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.xtraSchedulingDataSet1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.dateNavigator1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.groupBox1.ResumeLayout(False)
             Me.groupBox1.PerformLayout()
-            DirectCast(Me.slotDuration.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.slotDuration.Properties), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+'#End Region
         Private schedulerControl1 As DevExpress.XtraScheduler.SchedulerControl
-        Private WithEvents schedulerStorage1 As DevExpress.XtraScheduler.SchedulerStorage
-        Private xtraSchedulingDataSet As XtraSchedulingDataSet
+
+        Private schedulerStorage1 As DevExpress.XtraScheduler.SchedulerStorage
+
+        Private xtraSchedulingDataSet As FreeTimeIntervals.XtraSchedulingDataSet
+
         Private appointmentsBindingSource As System.Windows.Forms.BindingSource
+
         Private appointmentsTableAdapter As FreeTimeIntervals.XtraSchedulingDataSetTableAdapters.AppointmentsTableAdapter
-        Private xtraSchedulingDataSet1 As XtraSchedulingDataSet1
+
+        Private xtraSchedulingDataSet1 As FreeTimeIntervals.XtraSchedulingDataSet1
+
         Private resourcesBindingSource As System.Windows.Forms.BindingSource
+
         Private resourcesTableAdapter As FreeTimeIntervals.XtraSchedulingDataSet1TableAdapters.ResourcesTableAdapter
-        Private WithEvents button1 As System.Windows.Forms.Button
+
+        Private button1 As System.Windows.Forms.Button
+
         Private dateNavigator1 As DevExpress.XtraScheduler.DateNavigator
+
         Private groupBox1 As System.Windows.Forms.GroupBox
+
         Private label1 As System.Windows.Forms.Label
+
         Private slotDuration As DevExpress.XtraEditors.TimeEdit
     End Class
 End Namespace
-
